@@ -1,12 +1,8 @@
-import java.lang.reflect.Type;
-import java.util.*;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
         String inFix = "(2+2)/2";
         String postFix = "";
-        ListStack listStack=new ListStack<>();
+        ListStack<Object> listStack=new ListStack<>();
         for (int i = 0; i < inFix.length(); i++) {
             char ch = inFix.charAt(i);
             if(isNumeric(ch+"")){
